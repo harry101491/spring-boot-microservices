@@ -153,4 +153,13 @@ public class Tour implements Serializable {
      * The consumers of this class can only generate the fully intialized class
      */
     protected Tour() {}
+
+    @Override
+    public String toString() {
+        return "Tour [blurp=" + blurp + ", bullets=" + bullets + ", description=" + description + ", difficulty="
+                + difficulty + ", duration=" + duration + ", keywords=" + keywords + ", price=" + price + ", region="
+                + region + ", title=" + title + ", tourPackage=" + tourPackage + "]";
+    }
+
+    
 }

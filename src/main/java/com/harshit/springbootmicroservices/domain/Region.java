@@ -1,10 +1,7 @@
 package com.harshit.springbootmicroservices.domain;
 
 public enum Region {
-    CENTRAL_COAST("CENTRAL_COAST"), 
-    SOUTHERN_CALIFORNIA("SOUTHERN_CALIFORNIA"),
-    NORTHERN_CALIFORNIA("NORTHERN_CALIFORNIA"),
-    VARIES("VARIES");
+    Central_Coast("Central Coast"), Southern_California("Southern California"), Northern_California("Northern California"), Varies("Varies");
 
     private String label;
 

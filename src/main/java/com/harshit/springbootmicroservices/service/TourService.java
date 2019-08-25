@@ -1,5 +1,7 @@
 package com.harshit.springbootmicroservices.service;
 
+import java.util.List;
+
 import com.harshit.springbootmicroservices.domain.Difficulty;
 import com.harshit.springbootmicroservices.domain.Region;
 import com.harshit.springbootmicroservices.domain.Tour;
@@ -26,7 +28,7 @@ public class TourService {
         String duration,
         String bullets,
         String keywords,
-        String tourPackageCode,
+        String tourPackageName,
         Difficulty difficulty,
         Region region
     ) {
@@ -40,8 +42,15 @@ public class TourService {
             .withKeywords(keywords)
             .withDifficulty(difficulty)
             .withRegion(region)
-            .withTourPackage(tourPackageCode)
+            .withTourPackage(tourPackageName)
             .build()); 
     }
 
+    public List<Tour> lookup() {
+        return tourRepository.findAll();
+    }
+
+    public Long totalCount() {
+        return tourRepository.count();
+    }
 }

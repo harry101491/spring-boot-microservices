@@ -1,5 +1,7 @@
 package com.harshit.springbootmicroservices.service;
 
+import java.util.List;
+
 import com.harshit.springbootmicroservices.domain.TourPackage;
 import com.harshit.springbootmicroservices.repository.TourPackageRepository;
 
@@ -21,5 +23,9 @@ public class TourPacakageService {
 
     public Long totalTourPacakges() {
         return tourPackageRepository.count();
+    }
+
+    public List<TourPackage> lookUp() {
+        return tourPackageRepository.findAll();
     }
 }

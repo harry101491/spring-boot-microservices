@@ -6,6 +6,4 @@ import com.harshit.springbootmicroservices.domain.Tour;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface TourRepository extends JpaRepository<Tour, BigDecimal> {
-
-}
+public interface TourRepository extends JpaRepository<Tour, BigDecimal> {}

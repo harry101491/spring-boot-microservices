@@ -58,12 +58,12 @@ public class TourBuilder {
         return this;
     }
 
-    public TourBuilder withTourPackage(String tourCode) {
-        if(!tourPackageRepository.existsById(tourCode)) {
+    public TourBuilder withTourPackage(String tourName) {
+        if((tourPackageRepository.findByName(tourName) == null)) {
             this.tourPackage = null;
             return this;
         }
-        this.tourPackage = tourPackageRepository.findById(tourCode).orElse(null);
+        this.tourPackage = tourPackageRepository.findByName(tourName);
         return this;
     }
 
